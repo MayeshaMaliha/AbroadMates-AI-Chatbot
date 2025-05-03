@@ -21,7 +21,7 @@ services:
     ports:
       - "5055:5055"
     environment:
-      GEMINI_API_KEY: AIzaSyCkwLnpdLUrjUkIovKZ7CPM5X9jdvWoClk
+      GOOGLE_API_KEY=${GOOGLE_API_KEY}
     networks:
       - rasa-net
     restart: always
