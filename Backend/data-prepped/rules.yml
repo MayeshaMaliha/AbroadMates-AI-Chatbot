@@ -1,0 +1,103 @@
+version: "3.1"
+
+rules:
+
+- rule: Greet the user
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: Handle affirmations
+  steps:
+    - intent: affirm
+    - action: utter_affirm
+
+- rule: Handle denials
+  steps:
+    - intent: deny
+    - action: utter_deny
+
+- rule: Cheer up user
+  steps:
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+
+- rule: Respond to bot challenge
+  steps:
+    - intent: bot_challenge
+    - action: utter_bot_challenge
+
+- rule: Visa questions
+  steps:
+    - intent: ask_visa_requirements
+    - action: action_ask_gemini
+
+- rule: Accommodation questions
+  steps:
+    - intent: ask_accommodation
+    - action: action_ask_gemini
+
+- rule: University questions
+  steps:
+    - intent: ask_universities
+    - action: action_ask_gemini
+
+- rule: Tuition fees questions
+  steps:
+    - intent: ask_tuition_fees
+    - action: action_ask_gemini
+
+- rule: Language requirements
+  steps:
+    - intent: ask_language_requirements
+    - action: action_ask_gemini
+
+- rule: Application documents
+  steps:
+    - intent: ask_application_documents
+    - action: action_ask_gemini
+
+- rule: Application timeline
+  steps:
+    - intent: ask_application_timeline
+    - action: action_ask_gemini
+
+- rule: Part-time job rules
+  steps:
+    - intent: ask_part_time_rules
+    - action: action_ask_gemini
+
+- rule: Health insurance
+  steps:
+    - intent: ask_health_insurance
+    - action: action_ask_gemini
+
+- rule: Internship opportunities
+  steps:
+    - intent: ask_internship_opportunities
+    - action: action_ask_gemini
+
+- rule: Scholarships
+  steps:
+    - intent: ask_scholarships
+    - action: action_ask_gemini
+
+- rule: Campus facilities
+  steps:
+    - intent: ask_campus_facilities
+    - action: action_ask_gemini
+
+- rule: Respond to joke request
+  steps:
+    - intent: joke
+    - action: action_ask_gemini
+
+- rule: General questions
+  steps:
+    - intent: general_question
+    - action: action_ask_gemini

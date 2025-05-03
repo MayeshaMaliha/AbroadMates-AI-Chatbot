@@ -1,0 +1,66 @@
+version: "3.1"
+
+stories:
+
+- story: greet and ask visa question
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_visa_requirements
+    - action: action_ask_gemini
+
+- story: scholarship inquiry after greeting
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_scholarships
+    - action: action_ask_gemini
+
+- story: ask about accommodation and tuition
+  steps:
+    - intent: ask_accommodation
+    - action: action_ask_gemini
+    - intent: ask_tuition_fees
+    - action: action_ask_gemini
+
+- story: ask about language and application documents
+  steps:
+    - intent: ask_language_requirements
+    - action: action_ask_gemini
+    - intent: ask_application_documents
+    - action: action_ask_gemini
+
+- story: affirm after suggestion
+  steps:
+    - intent: ask_universities
+    - action: action_ask_gemini
+    - intent: affirm
+    - action: utter_affirm
+
+- story: user denies after advice
+  steps:
+    - intent: general_question
+    - action: action_ask_gemini
+    - intent: deny
+    - action: utter_deny
+
+- story: unhappy user gets support
+  steps:
+    - intent: mood_unhappy
+    - action: utter_cheer_up
+    - intent: ask_campus_facilities
+    - action: action_ask_gemini
+
+- story: bot challenge before question
+  steps:
+    - intent: bot_challenge
+    - action: utter_bot_challenge
+    - intent: ask_part_time_rules
+    - action: action_ask_gemini
+
+- story: end conversation
+  steps:
+    - intent: general_question
+    - action: action_ask_gemini
+    - intent: goodbye
+    - action: utter_goodbye
