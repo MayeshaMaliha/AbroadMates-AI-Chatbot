@@ -36,8 +36,8 @@ Built using **Rasa** and **Google Gemini**, and deployed with **Docker** + **Ngi
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/yourusername/AbroadMates-Chatbot-Hybrid-clean.git
-   cd AbroadMates-Chatbot-Hybrid-clean
+   git clone https://github.com/yourusername/AbroadMates-AI-Chatbot.git
+   cd AbroadMates-AI-Chatbot
 Train Rasa model
 docker exec -it rasa-core bash
 rasa train
