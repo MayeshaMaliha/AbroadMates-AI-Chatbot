@@ -1,1 +1,189 @@
+nlu:
+  - intent: greet
+    examples: |
+      - hi
+      - hello
+      - hey there
+      - good morning
+      - good evening
+      - what's up
 
+  - intent: goodbye
+    examples: |
+      - bye
+      - see you later
+      - goodbye
+      - take care
+      - catch you later
+      - see ya
+
+  - intent: affirm
+    examples: |
+      - yes
+      - correct
+      - absolutely
+      - sure
+      - definitely
+      - that's right
+
+  - intent: deny
+    examples: |
+      - no
+      - not really
+      - nope
+      - I don't think so
+      - never
+      - I disagree
+
+  - intent: mood_great
+    examples: |
+      - I feel amazing
+      - I'm doing great
+      - everything's perfect
+      - couldn't be better
+      - I'm super happy
+      - life is good
+
+  - intent: mood_unhappy
+    examples: |
+      - I'm feeling down
+      - today was rough
+      - I feel bad
+      - not my day
+      - I'm really sad
+      - things aren't going well
+
+  - intent: bot_challenge
+    examples: |
+      - are you real?
+      - are you a bot?
+      - am I chatting with a human?
+      - are you human?
+      - who am I talking to?
+      - are you an AI?
+
+  - intent: ask_visa_requirements
+    examples: |
+      - what are the visa rules for students?
+      - how do I get a student visa?
+      - what’s needed for a student visa?
+      - can I work on a student visa?
+      - how long is a student visa valid?
+      - what’s the visa process for studying abroad?
+
+  - intent: ask_accommodation
+    examples: |
+      - where do students live?
+      - how can I find student housing?
+      - is campus accommodation available?
+      - can I live off-campus?
+      - are there shared rooms for students?
+      - what’s the average rent for students?
+
+  - intent: ask_universities
+    examples: |
+      - suggest good universities abroad
+      - what are top universities in Japan?
+      - which schools offer English courses?
+      - name affordable universities overseas
+      - what’s the best place to study in Europe?
+      - recommend a university in Tokyo
+
+  - intent: ask_tuition_fees
+    examples: |
+      - how much are tuition fees?
+      - is studying abroad expensive?
+      - what’s the cost of a master’s degree?
+      - do international students get discounts?
+      - are there tuition waivers available?
+      - how much does university cost in Canada?
+
+  - intent: ask_scholarships
+    examples: |
+      - are there any scholarships for international students?
+      - how can I apply for scholarships abroad?
+      - what types of scholarships are available?
+      - is MEXT scholarship still open?
+      - what’s the deadline for applying to JASSO?
+      - can I get a full scholarship to study overseas?
+
+  - intent: ask_language_requirements
+    examples: |
+      - do I need to take the IELTS?
+      - what English tests are accepted?
+      - is TOEFL required for studying in the US?
+      - can I study without a language certificate?
+      - what’s the minimum IELTS score for Canada?
+      - is Duolingo test accepted?
+
+  - intent: ask_application_documents
+    examples: |
+      - what documents are needed to apply?
+      - do I need a letter of recommendation?
+      - how many transcripts should I submit?
+      - is a statement of purpose required?
+      - do I need my high school certificate?
+      - what is a motivation letter?
+
+  - intent: ask_application_timeline
+    examples: |
+      - when should I apply to universities abroad?
+      - how early should I prepare my application?
+      - when do applications open for fall intake?
+      - what’s the best time to apply for Japan?
+      - is it too late to apply for 2025?
+      - what is the application deadline?
+
+  - intent: ask_part_time_rules
+    examples: |
+      - can I work part-time while studying?
+      - how many hours can students work in Japan?
+      - are there limits on student jobs?
+      - do I need permission to work while studying?
+      - what kind of part-time jobs are allowed?
+      - can international students do internships?
+
+  - intent: ask_health_insurance
+    examples: |
+      - do I need health insurance to study abroad?
+      - what is student health coverage in Germany?
+      - how much is health insurance in Japan?
+      - is health insurance mandatory for students?
+      - what are the options for international health plans?
+      - does the university provide medical insurance?
+
+  - intent: ask_internship_opportunities
+    examples: |
+      - are internships available for international students?
+      - can I do an internship during my studies?
+      - how do I apply for internships abroad?
+      - are internships paid?
+      - does the university help find internships?
+      - can I do research internships in Japan?
+
+  - intent: ask_campus_facilities
+    examples: |
+      - what facilities does the campus have?
+      - is there a gym or sports center?
+      - does the university have a library?
+      - are there student clubs?
+      - what support services are available?
+      - can I use the lab facilities as a student?
+
+  - intent: joke
+    examples: |
+      - tell me a joke
+      - say something funny
+      - make me laugh
+      - give me a fun line
+      - do you know any jokes?
+      - cheer me up with a joke
+
+  - intent: general_question
+    examples: |
+      - tell me about scholarships
+      - how is life for international students?
+      - can I work while studying abroad?
+      - what’s the admission process in Europe?
+      - how do I choose a university?
+      - should I study in Canada or the UK?
