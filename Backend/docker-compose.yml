@@ -1,0 +1,31 @@
+version: '3.0'
+
+services:
+  rasa:
+    container_name: rasa-core
+    image: rasa-core
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./models:/app/models
+      - ./endpoints.yml:/app/endpoints.yml
+    command: >
+      rasa run --enable-api --cors "*" --debug
+    networks:
+      - rasa-net
+    restart: always
+
+  actions:
+    container_name: rasa-actions
+    image: abroadmates-actions
+    ports:
+      - "5055:5055"
+    environment:
+      GEMINI_API_KEY: AIzaSyCkwLnpdLUrjUkIovKZ7CPM5X9jdvWoClk
+    networks:
+      - rasa-net
+    restart: always
+
+networks:
+  rasa-net:
+    driver: bridge

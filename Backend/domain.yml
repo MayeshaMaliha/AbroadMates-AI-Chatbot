@@ -1,0 +1,60 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ask_visa_requirements
+  - ask_accommodation
+  - ask_universities
+  - ask_tuition_fees
+  - ask_language_requirements
+  - ask_application_documents
+  - ask_application_timeline
+  - ask_part_time_rules
+  - ask_health_insurance
+  - ask_internship_opportunities
+  - ask_scholarships
+  - ask_campus_facilities
+  - joke
+  - general_question
+
+responses:
+  utter_greet:
+    - text: "Hi there! How can I assist you with your study abroad journey today?"
+
+  utter_goodbye:
+    - text: "Goodbye! Wishing you the best on your academic journey."
+
+  utter_affirm:
+    - text: "Great! Let me know if there's anything else I can help you with."
+
+  utter_deny:
+    - text: "Alright, let me know if you need something else!"
+
+  utter_cheer_up:
+    - text: "I'm sorry to hear that. Here's something to cheer you up!"
+
+  utter_bot_challenge:
+    - text: "I'm an AI assistant here to support you with study abroad info!"
+
+  utter_default:
+    - text: "I'm not sure I understood that. Could you rephrase?"
+
+actions:
+  - action_ask_gemini
+  - action_gemini_fallback
+
+policies:
+  - name: FallbackPolicy
+    nlu_threshold: 0.2
+    core_threshold: 0.3
+    fallback_action_name: "action_gemini_fallback"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
