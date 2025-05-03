@@ -32,25 +32,6 @@ Built using **Rasa** and **Google Gemini**, and deployed with **Docker** + **Ngi
 
 ---
 
-## 📁 Folder Structure
-
-AbroadMates-Chatbot-Hybrid-clean/
-├── actions/ # Custom action with Gemini integration
-├── data/ # NLU training examples
-├── models/ # Trained Rasa models
-├── domain.yml # Intents, responses, and config
-├── endpoints.yml # Action server config
-├── config.yml # Pipeline and policies
-├── docker-compose.yml # Docker setup for Rasa & actions
-├── frontend/
-│ ├── index.html # UI interface
-│ └── app.js # Chat logic
-└── nginx/
-└── chat.abroadmates.com # Nginx site config
-
-
----
-
 ## 🚀 How to Run
 
 1. **Clone the repo**
