@@ -1,27 +1,28 @@
-version: '3.0'
+version: "3.9"
 
 services:
   rasa:
     container_name: rasa-core
-    image: rasa-core
+    image: rasa/rasa:3.6.2
     ports:
       - "5005:5005"
     volumes:
-      - ./models:/app/models
-      - ./endpoints.yml:/app/endpoints.yml
-    command: >
-      rasa run --enable-api --cors "*" --debug
+      - .:/app
+    working_dir: /app
+    command: ["run", "--enable-api", "--cors", "*", "--debug"]
     networks:
       - rasa-net
     restart: always
 
   actions:
     container_name: rasa-actions
-    image: abroadmates-actions
+    build:
+      context: .
+      dockerfile: Dockerfile.actions
     ports:
       - "5055:5055"
-    environment:
-      GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    env_file:
+      - .env
     networks:
       - rasa-net
     restart: always
