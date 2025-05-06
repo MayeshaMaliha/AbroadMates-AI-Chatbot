@@ -43,7 +43,10 @@ function App() {
       console.error("Error communicating with Rasa:", error);
       setMessages((prev) => [
         ...prev,
-        { sender: "bot", text: "❌ Error: Unable to connect to chatbot." },
+        {
+          sender: "bot",
+          text: "❌ Oi, Mate! I'm having trouble processing your request.",
+        },
       ]);
     }
   };
@@ -87,18 +90,24 @@ function App() {
             {messages.map((msg, i) => (
               <div
                 key={i}
-                className={`max-w-[75%] px-4 py-2 rounded-2xl text-sm shadow ${
-                  msg.sender === "user"
-                    ? "ml-auto bg-red-500 text-white rounded-br-none"
-                    : "mr-auto bg-white text-gray-800 rounded-bl-none"
+                className={`flex ${
+                  msg.sender === "user" ? "justify-end" : "justify-start"
                 }`}
               >
-                <div className="prose prose-sm max-w-full">
-                  <ReactMarkdown>
-                    {msg.sender === "user"
-                      ? `**You:** ${msg.text}`
-                      : `**Mate:** ${msg.text}`}
-                  </ReactMarkdown>
+                <div
+                  className={`inline-block max-w-xs px-4 py-2 rounded-2xl text-sm shadow break-words ${
+                    msg.sender === "user"
+                      ? "ml-auto bg-red-500 text-white rounded-br-none"
+                      : "mr-auto bg-white text-gray-800 rounded-bl-none"
+                  }`}
+                >
+                  <div className="prose prose-sm max-w-full">
+                    <ReactMarkdown>
+                      {msg.sender === "user"
+                        ? `**You:** ${msg.text}`
+                        : `**Mate:** ${msg.text}`}
+                    </ReactMarkdown>
+                  </div>
                 </div>
               </div>
             ))}
