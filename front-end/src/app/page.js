@@ -20,7 +20,7 @@ function App() {
 
     try {
       const response = await axios.post(
-        "http://34.120.12.34:5005/webhooks/rest/webhook",
+        "http://34.45.48.237:5005/webhooks/rest/webhook",
         {
           sender: "user123",
           message: trimmedInput,
