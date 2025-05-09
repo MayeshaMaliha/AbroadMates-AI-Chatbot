@@ -19,7 +19,7 @@ function App() {
 
     try {
       const response = await axios.post(
-        "http://localhost:5005/webhooks/rest/webhook",
+        "https://chatbot.abroadmates.com/webhooks/rest/webhook",
         {
           sender: "user123",
           message: trimmedInput,
